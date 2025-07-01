@@ -16,7 +16,7 @@
     --glow-finish: rgba(139, 33, 246, 0)
 }
 
-@media (prefers-color-scheme: drk) {
+@media (prefers-color-scheme: dark) {
   :root {
     --background: #1F1B24;
     --foreground: #FADADD;
