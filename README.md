@@ -7,14 +7,14 @@ Productivity tools often feel harsh or clinical. I wanted to explore how soft vi
 
 ---
 
-##Tech Stack
-- Framework: Next.js 14 (App Router)
-- Styling: Tailwind CSS + custom pastel palette
-- State Management: Zustand (for timer and mood states)
-- Animations: Framer Motion
-- Sound: HTML5 Audio API (ambient music during breaks)
-- Storage: LocalStorage (privacy-first, login-free)
-- Deployment: Vercel
+## Tech Stack
+- **Framework**: Next.js 14 (App Router)
+- **Styling**: Tailwind CSS + custom pastel palette
+- **State Management**: Zustand (for timer and mood states)
+- **Animations**: Framer Motion
+- **Sound**: HTML5 Audio API (ambient music during breaks)
+- **Storage**: LocalStorage (privacy-first, login-free)
+- **Deployment**: Vercel
 
 ---
 
