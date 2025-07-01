@@ -37,6 +37,7 @@ import { Session, TimerStore } from "./_libs/type";
   isStarted: false,
   isFocusRunning: false,
   isBreakRunning: false,
+  breakMusic: undefined,
   secondsLeft: sessions[0].focusTime,
   timerRef: { current: null as null | number },
 
