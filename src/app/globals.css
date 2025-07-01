@@ -1,0 +1,58 @@
+@import "tailwindcss";
+
+
+:root {
+  --background: 	#f8d0d4;
+  --foreground: #1F1B24;
+
+    --color-blush: #FADADD;
+  --color-lavender: #EADCF8;
+  --color-mint: #DFF5E9;
+  --color-butter: #FFF7D6;
+  --color-peach: #FFE0C7;
+  --color-midnight: #1F1B24;
+
+   --glow-start: rgba(139, 33, 246, 0.5);
+    --glow-finish: rgba(139, 33, 246, 0)
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #1F1B24;
+    --foreground: #FADADD;
+    --glow-start: rgba(201, 157, 244, 0.8);
+    --glow-finish: rgba(234, 220, 248, 0)
+  }
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+
+  --color-blush: #FADADD;
+  --color-lavender: #EADCF8;
+  --color-mint: #DFF5E9;
+  --color-butter: #FFF7D6;
+  --color-peach: #FFE0C7;
+  --color-midnight: #1F1B24;
+}
+
+@keyframes soft-pulse {
+  0% {
+    box-shadow: 0 0 0 0 var(--glow-start);
+  }
+  70% {
+    box-shadow: 2px 3px 4px 18px var(--glow-finish);
+  }
+  100% {
+    box-shadow: 0 0 0 0 var(--glow-finish);
+  }
+}
+
+.animate-soft-pulse {
+  animation: soft-pulse 1s infinite;
+}
+/* body {
+  background: var(--background);
+  color: var(--foreground);
+} */
