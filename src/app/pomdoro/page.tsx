@@ -1,10 +1,8 @@
 import Time from '@/_component/Time'
-import { getAffirmations } from '@/_libs/api';
 import React from 'react'
 
-export default async function page() {
-     const data = await getAffirmations()
-  console.log(data);
+export default function page() {
+  
   return (
       // add sound during actions
   //when you make it a pwa, add push notifications (e.g., “Break over, bestie!” 🌸)
@@ -13,12 +11,6 @@ export default async function page() {
 
         {/* time */}
           <Time />
-
-         {/* Affirmation */}
-         {/* At the end of a session, display a cute animation with a motivational affirmation */}
-        <p className="text-center text-lg italic max-w-xs text-foreground/80">
-          {`“${data.text}” 🌷`}
-        </p>
 
         {/* Tiny emoji mood tracker after each session → logs how the session felt (💪 focused, 😴 tired, 😡 distracted). */}
         {/* Mood Check-in Prompt */}

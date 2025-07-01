@@ -101,34 +101,28 @@ if(timerRef)
 
     set(() => ({
       isRunning: true,
-    //   isStarted: true,
+    // isStarted: true,
       secondsLeft: currSession.breakTime,
     }));
 
-    // 🎵 Start break music
-  const breakMusic = new Audio('/alarm-pomdoro.mp3');
-  breakMusic.loop = true;
-  breakMusic.volume = 0.5;
-  breakMusic.play().catch(() => {
-    console.warn('Break music autoplay failed');
-  });
-
-    // Store globally (or use Zustand state if you want to be cleaner)
-  (window as any).__breakMusic = breakMusic;
+    // Start break music
+    const music = new Audio('/alarm-pomdoro.mp3');
+    music.loop = true;
+    music.volume = 0.5;
+    music.play().catch(() => console.warn('Autoplay failed'));
+    set(() => ({ breakMusic: music }));
 
 if(timerRef)
     timerRef.current = window.setInterval(() => {
-      const { secondsLeft: current } = get();
+      const { secondsLeft: current, breakMusic } = get();
       if (current <= 1) {
         clearInterval(timerRef.current!);
         timerRef.current = null;
 
-          // ❌ Stop break music
-        (window as any).__breakMusic?.pause();
-        if ((window as any).__breakMusic) {
-          (window as any).__breakMusic.currentTime = 0;
-        }
-        delete (window as any).__breakMusic;
+          // Stop break music
+          breakMusic?.pause();
+          if (breakMusic) breakMusic.currentTime = 0;
+          set(() => ({ breakMusic: undefined }));
 
         set(() => ({
           isRunning: false,

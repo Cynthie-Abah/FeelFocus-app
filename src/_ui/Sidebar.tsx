@@ -49,7 +49,7 @@ export default function Sidebar() {
             </button>
 
             {/* 🌸 Sidebar Content */}
-            <h2 className={`text-lg font-bold mb-6 mt-2 text-background text-center ${press_start.className}`}>🌸 HEY 🌸 <br/> PRINCESS</h2>
+            <h2 className={`text-lg font-bold mb-6 mt-2 text-background text-center ${press_start.className}`}>🌸 HEY 🌸 <br/> ANGEL</h2>
 
             <nav className="flex flex-col gap-4 text-sm text-background pl-5">
 
@@ -87,7 +87,7 @@ export default function Sidebar() {
 
       {/* 🖥 Desktop Sidebar */}
       <aside className="hidden md:flex flex-col gap-4 p-6 bg-foreground/50 backdrop-blur-lg border-r border-foreground shadow-md rounded-tr-2xl rounded-br-3xl min-h-screen">
-        <h2 className={`text-sm font-bold mb-6 mt-2 text-background text-center ${press_start.className}`}>🌸 HEY PRINCESS  🌸</h2>
+        <h2 className={`text-sm font-bold mb-6 mt-2 text-background text-center ${press_start.className}`}>🌸 HEY ANGEL 🌸</h2>
         <nav className="flex flex-col gap-3 text-sm text-background">
           <Link                          
             className='flex items-center gap-2 text-[1rem] p-3 hover:text-white focus:text-white active:text-white hover:bg-peach/30 focus:bg-peach/30 active:bg-peach/30 duration-100 ease-out rounded-md' 
